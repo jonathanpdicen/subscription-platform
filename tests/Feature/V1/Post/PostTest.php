@@ -29,4 +29,14 @@ class PostTest extends TestCase
 
         $this->assertDatabaseHas('posts', $payload);
     }
+
+    public function testPublishPost(): void
+    {
+        $post = Post::factory()->create();
+
+        $this->putJson("api/v1/posts/$post->id/publish")
+            ->assertOk();
+
+        $this->assertEquals(PostStatusEnum::PUBLISHED->value, $post->fresh()->status);
+    }
 }

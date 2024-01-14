@@ -21,3 +21,6 @@ Jonathan Dicen - Laravel Tech Assessment
 - PUT /api/v1/posts/{post}/publish
 
 - POST /api/v1/websites/{website}/subscribe
+
+### Optional
+``` php artisan test ```
