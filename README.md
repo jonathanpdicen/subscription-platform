@@ -3,6 +3,9 @@
 Jonathan Dicen - Laravel Tech Assessment
 
 ### Setup
+
+I used mailtrap.io for email notification testing.
+
 1. cp .env.example .env
 2. ``` composer install ```
 3. ``` php artisan key:generate ```
